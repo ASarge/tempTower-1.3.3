@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=myWorld
+comment0.text=\r\n\ To\ do\ list\r\n\ add\ in\ .txt\ file\ reader\r\n\ add\ in\ tower\ menu\ jfc\r\n
+comment1.params=
+comment1.target=myWorld()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ myWorld.\r\n\ \r\n
+comment2.params=
+comment2.target=void\ enemyWave()
+comment3.params=
+comment3.target=void\ createPath()
+comment4.params=
+comment4.target=void\ act()
+numComments=5
