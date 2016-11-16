@@ -20,20 +20,29 @@ public class Tower extends Actor
     public int firingRate;
     public int xLoc;
     public int yLoc;
+    int fX, fY;
         
-    public Tower() 
+    public Tower()
     {
-        xLoc = 0;
-        yLoc = 0;
         damage = 10;
         firingRate = 10;
         aim = new Aimer(5, this);
         world = (myWorld)getWorld();
     }
     
-    public void homeCastle() {
-        xLoc = world.f * 13;
-        yLoc = world.f * 11;
+    public Tower(int x, int y) 
+    {
+        fX = x;
+        fY = y;
+        damage = 10;
+        firingRate = 10;
+        aim = new Aimer(5, this);
+        world = (myWorld)getWorld();
+    }
+    
+    public void setHome() {
+        xLoc = fX * 13;
+        yLoc = fY * 11;
     }
     
     public void act() 

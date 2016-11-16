@@ -45,8 +45,8 @@ public class myWorld extends World
         createPath();
         mouse = Greenfoot.getMouseInfo();
         pause = false;
-        homeTower = new Tower();
-        homeTower.homeCastle();
+        homeTower = new Tower(f, f);
+        homeTower.setHome();
       }
    
     public void enemyWave() {
