@@ -26,6 +26,7 @@ public class myWorld extends World
     boolean keyPress;
     boolean mouseSearch;
     boolean pause;
+    Tower homeTower;
     Waypoint p;
     int maxEnemies = 5;
     public static int enemies = 0;
@@ -44,7 +45,8 @@ public class myWorld extends World
         createPath();
         mouse = Greenfoot.getMouseInfo();
         pause = false;
-        h = new TowerHolder();
+        homeTower = new Tower();
+        homeTower.homeCastle();
       }
    
     public void enemyWave() {
@@ -84,8 +86,9 @@ public class myWorld extends World
     public void act() {
         mouse = Greenfoot.getMouseInfo();
         timer++;
-        addObject(h, f*14, 0);
-        
+        addObject(homeTower, homeTower.xLoc, homeTower.yLoc);
+        //h = new TowerHolder(f*13, 0);
+        //addObject(h, f*14, 0);
         if (Greenfoot.isKeyDown("space")) {
             addObject(new Tower(), mouse.getX(), mouse.getY());
         }

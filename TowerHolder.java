@@ -21,17 +21,16 @@ public class TowerHolder extends Actor
      */
     
     GreenfootImage img;
-    Color menuColor;
     myWorld world;
     mouseTrack m;
     int f;
     
-    public TowerHolder() {
+    public TowerHolder(int xLoc, int yLoc) {
         f = 50;
         world = (myWorld)getWorld();
-        img = new GreenfootImage(f*14, 0);
+        img = new GreenfootImage(xLoc, yLoc);
         img.setColor(java.awt.Color.BLACK);
-        img.fillRect(f*14, 0, world.getWidth(), world.getHeight());
+        img.fillRect(0, 0, world.screenWidth, world.screenHeight);
         setImage(img);
     }
     

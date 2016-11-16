@@ -28,6 +28,12 @@ public class Tower extends Actor
         damage = 10;
         firingRate = 10;
         aim = new Aimer(5, this);
+        world = (myWorld)getWorld();
+    }
+    
+    public void homeCastle() {
+        xLoc = world.f * 13;
+        yLoc = world.f * 11;
     }
     
     public void act() 
